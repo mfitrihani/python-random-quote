@@ -6,11 +6,9 @@ def primary():
     quotes = f.readlines()
     f.close()
 
-    last = len(quotes) - 1
-    rnd = random.randint(0, last)
-    rnd2 = random.randint(0, last)
-    print(quotes[rnd].rstrip())
-    print(quotes[rnd2].rstrip())
+    line1, line2 = random.sample(quotes, 2)
+    print(line1.rstrip())
+    print(line2.rstrip())
 
 
 if __name__ == "__main__":
